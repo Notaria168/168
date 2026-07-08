@@ -3,8 +3,8 @@ import { AREAS, AREAS_CON_AGENDA, AREA_EDITA_AGENDA, LOGO_URL, USUARIOS_INICIALE
 import { Avisos, VistaConsulta, MenuLateral, BuscadorGlobal, MenuPrincipal, Header } from "./Shared";
 import { BTNP, BTNR, IN, IN0, LBL, TD, BTNAC } from "./AreasB";
 import { Proyectos } from "./Proyectos";
-import { Previos, RegistroExpedientes, DetalleExpediente, PaseFolio } from "./AreasA";
-import { PaseFolio2, TrasladoDominio, PanelAgenda, AdminPanel } from "./AreasB";
+import { Previos, RegistroExpedientes, DetalleExpediente } from "./AreasA";
+import { PaseFolio, PaseFolio2, TrasladoDominio, PanelAgenda, AdminPanel } from "./AreasB";
 // ─── APP PRINCIPAL ────────────────────────────────────────────────────────────
 export default function App() {
   const [usuarios, setUsuarios]     = useState(USUARIOS_INICIALES);

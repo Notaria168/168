@@ -1,3 +1,4 @@
+
 export const LOGO_URL = "/mnt/user-data/uploads/LOGO_NOTARIA168_OFICAL__trasnparente-Horizontal_.png";
 
 export const AREAS = [

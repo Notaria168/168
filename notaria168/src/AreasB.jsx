@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { AREAS, BANCOS_MEXICO, ESTATUSES, ABOGADOS, REVISORES, PROTOCOLISTAS } from "./constants";
 import { MenuLateral, BuscadorGlobal } from "./Shared";
-function PaseFolio({ pasesFolio, setPasesFolio, expedientes, pasesFolio2, sesion, editable, onBack, onLogout, logoUrl, hs, nombreArea, searchProps }) {
+export function PaseFolio({ pasesFolio, setPasesFolio, expedientes, pasesFolio2, sesion, editable, onBack, onLogout, logoUrl, hs, nombreArea, searchProps }) {
   const [vista, setVista] = useState("lista"); // "lista" | "nuevo" | "detalle"
   const [busqueda, setBusqueda] = useState("");
   const [detalleId, setDetalleId] = useState(null);
@@ -105,7 +105,7 @@ function PaseFolio({ pasesFolio, setPasesFolio, expedientes, pasesFolio2, sesion
   );
 }
 
-function formVacioFolio() {
+export function formVacioFolio() {
   return {
     fechaPase: "", expediente: "", escritura: "", abogado: "", nombreCliente: "", operacion: "", banco: "",
     noCreditoInfonavit: "", municipio: "",
@@ -123,7 +123,7 @@ function formVacioFolio() {
   };
 }
 
-function FormularioPaseFolio({ expedientes, pasesFolio2, onCrear, onCancelar }) {
+export function FormularioPaseFolio({ expedientes, pasesFolio2, onCrear, onCancelar }) {
   const [form, setForm] = useState(formVacioFolio());
   const [expSugerido, setExpSugerido] = useState(null);
   const [escrituraAuto, setEscrituraAuto] = useState(false);
@@ -292,7 +292,7 @@ function FormularioPaseFolio({ expedientes, pasesFolio2, onCrear, onCancelar }) 
   );
 }
 
-function DetallePaseFolio({ pase, onVolver }) {
+export function DetallePaseFolio({ pase, onVolver }) {
   if (!pase) return (
     <div style={{ background: "#fff", borderRadius: 20, padding: 40, textAlign: "center", color: "#9aa3be" }}>
       Registro no encontrado.
@@ -399,7 +399,7 @@ function DetallePaseFolio({ pase, onVolver }) {
   );
 }
 
-function FieldsetTitulo({ children }) {
+export function FieldsetTitulo({ children }) {
   return (
     <h4 style={{
       fontSize: 13, fontWeight: 700, color: "#0D1B4B", textTransform: "uppercase", letterSpacing: 0.5,
@@ -408,11 +408,11 @@ function FieldsetTitulo({ children }) {
   );
 }
 
-function Grid2({ children }) {
+export function Grid2({ children }) {
   return <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>{children}</div>;
 }
 
-function Campo({ label, children }) {
+export function Campo({ label, children }) {
   return (
     <label style={{ display: "flex", flexDirection: "column", gap: 4 }}>
       <span style={{ fontSize: 12, color: "#6b7a9d", fontWeight: 600 }}>{label}</span>
