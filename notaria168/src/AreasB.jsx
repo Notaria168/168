@@ -1223,4 +1223,3 @@ export const LBL = { fontSize: 14, fontWeight: 600, color: "#3a4560" };
 export const IN0 = { width: "100%", padding: "10px 14px", borderRadius: 10, border: "1.5px solid #dde2ef", fontSize: 14, outline: "none", boxSizing: "border-box", fontFamily: "inherit", background: "#fbfcfe" };
 export const BTNAC = (color) => ({ background: "none", border: `1px solid ${color}`, color, borderRadius: 6, padding: "3px 10px", cursor: "pointer", fontSize: 12, marginRight: 6, fontWeight: 500 });
 export const cardMetrica = (bg, color) => ({ background: bg, borderRadius: 12, padding: "14px 16px", cursor: "pointer", border: `1.5px solid ${color}22`, textAlign: "center", color });
-
